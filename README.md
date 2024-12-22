@@ -49,6 +49,11 @@ If you're using OpenAI, you can customize your model and API URL by adding the f
 > export OPENAI_BASE_URL="..." # Default to None
 ```
 
+You can also set the optional `WUT_LANGUAGE` environment variable to specify the language for responses, defaulting to "English":
+```bash
+> export WUT_LANGUAGE="..." # Default is "English"
+```
+
 ## Usage
 
 `wut` must be used inside a `tmux` or `screen` session to capture the last command's output. To use it, just type `wut` after running a command:
@@ -74,7 +79,7 @@ If you have a _specific question_ about your last command, you can include a que
 ```bash
 > brew install pip
 ...
-> wut "how do i add this to my PATH variable?"
+> wut --query "how do i add this to my PATH variable?"
 ```
 
 ## Roadmap
